@@ -38,6 +38,7 @@ html {
     height: 500px;
     border-radius: 16px;
     transition: all 1s;
+    cursor: pointer;
 }
 
 .movie-poster-container img:hover {
@@ -106,6 +107,48 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.395);
+    text-align: center;
+    display: none;
+}
+
+.modal-content {
+    border-radius: 5%;
+    background-color: aliceblue;
+    margin: 5% auto;
+    padding: 3rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s ease-in-out;
+    box-shadow: 8px 8px 8px -4px rgb(81, 81, 81);
+}
+
+.modal-content h1 {
+    margin-top: 10px;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.movie-poster-modal {
+    width: 300px;
+}
+
+.closebtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 footer {
